@@ -1,4 +1,4 @@
-RecipeFormatVersion: 2020-01-25
+RecipeFormatVersion: '2020-01-25'
 ComponentName: aws.greengrass.labs.SecretsManagerClient
 ComponentVersion: 1.0.0
 ComponentDescription: A component providing a client to fetch secrets from

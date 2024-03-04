@@ -17,7 +17,7 @@ For example, the recipe of a component using SecretsManagerClient would look lik
 ```yaml
 RecipeFormatVersion: 2020-01-25
 ...
-ComponentDependencies: 
+ComponentDependencies:
   aws.greengrass.labs.SecretsManagerClient:
     VersionRequirement: ">0.0.0"
 ComponentConfiguration:
@@ -25,10 +25,10 @@ ComponentConfiguration:
     username: "test"
     accessControl:
       aws.greengrass.SecretManager:
-        auth-1: 
+        auth-1:
           operations:
           - aws.greengrass#GetSecretValue
-          resources: 
+          resources:
           - "*"
 Manifests:
   - Lifecycle:
@@ -87,3 +87,42 @@ The following table describes the changes in each version of the component.
 |---|---|
 | 1.0.0 | Initial version |
 
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+No requirements.
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.39.1 |
+| <a name="provider_null"></a> [null](#provider\_null) | 3.2.2 |
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_component_bucket"></a> [component\_bucket](#module\_component\_bucket) | terraform-aws-modules/s3-bucket/aws | 3.15.1 |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [null_resource.build_and_publish](https://registry.terraform.io/providers/hashicorp/null/latest/docs/resources/resource) | resource |
+| [aws_availability_zones.available](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/availability_zones) | data source |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
+| [aws_partition.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/partition) | data source |
+| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/region) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_component_version"></a> [component\_version](#input\_component\_version) | n/a | `string` | `"1.0.0"` | no |
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->

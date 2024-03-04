@@ -1,0 +1,9 @@
+# .terraform-docs.yaml
+formatter: markdown
+header-from: main.tf
+sort:
+  enabled: true
+recursive:
+  enabled: false
+output:
+  file: "README.md"
