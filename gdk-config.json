@@ -4,12 +4,12 @@
             "author": "Amazon Web Services",
             "version": "1.0.0",
             "build": {
-                "build_system": "gradle"
-                
+                "build_system": "gradlew"
+
             },
             "publish": {
-                "bucket": "<your-bucket-prefix>",
-                "region": "eu-west-1"
+                "bucket": "com.alaracare.secretsmanagerclient",
+                "region": "us-east-1"
             }
         }
     },
